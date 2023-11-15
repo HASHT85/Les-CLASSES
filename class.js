@@ -7,7 +7,7 @@ class Creature {
     }
 
     saysomething() {
-        console.log(`I am a mysterious creature named ${this.name}.`);
+        console.log(`La mystérieuse créature ${this.name}.`);
     }
 
     identity() {
@@ -23,15 +23,15 @@ class Orc extends Creature {
     }
 
     scream() {
-        console.log(`${this.name} screams with a powerful rage!`);
+        console.log(` cri puissant de ${this.name}`);
     }
 
     bite() {
-        console.log(`${this.name} bites with sharp teeth!`);
+        console.log(`${this.name} mord avec ses dents acérées.`);
     }
 
     saysomething() {
-        console.log(`I am ${this.name} the Orc!`);
+        console.log(`Je suis ${this.name} the Orc!`);
     }
 
     identity() {
@@ -47,11 +47,11 @@ class Urukhai extends Orc {
     }
 
     kill() {
-        console.log(`${this.name} kills its enemies fiercely!`);
+        console.log(`${this.name} tue ses ennemis.`);
     }
 
     saysomething() {
-        console.log(`I am ${this.name}, a mighty Urukhai!`);
+        console.log(`Je suis ${this.name}`);
     }
 
     identity() {
@@ -80,3 +80,38 @@ class ChiefOrc extends Orc {
         console.log(`Chief: ${this.isChief}`);
     }
 }
+
+
+// Instanciation de créatures
+const creature1 = new Creature("Mysterious Being", 1000, 5);
+const creature2 = new Creature("Mystical Entity", 500, 8);
+
+// Instanciation d'orcs
+const orc1 = new Orc("Grommash", 35, 25, true);
+const orc2 = new Orc("Thrall", 32, 22, false);
+
+// Instanciation d'Urukhai
+const urukhai1 = new Urukhai("Urukhai 1", 40, 30);
+const urukhai2 = new Urukhai("Urukhai 2", 38, 28);
+
+// Instanciation de chefs orcs
+const chiefOrc1 = new ChiefOrc("Chief 1", 45, 35);
+const chiefOrc2 = new ChiefOrc("Chief 2", 42, 33);
+
+// Tests spécifiques à chaque type de créature
+console.log("Tests spécifiques à chaque type de créature:");
+orc1.scream();
+orc1.bite();
+urukhai1.kill();
+chiefOrc1.giveOrder();
+
+// Tests des méthodes saysomething et identity
+console.log("\nTests des méthodes saysomething et identity:");
+creature1.saysomething();
+creature2.identity();
+
+orc1.saysomething();
+orc2.identity();
+
+urukhai1.saysomething();
+chiefOrc1.identity();
