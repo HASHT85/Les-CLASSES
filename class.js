@@ -7,7 +7,7 @@ class Creature {
     }
 
     saysomething() {
-        console.log(`La mystérieuse créature ${this.name}.`);
+        console.log(`La créature ${this.name}.`);
     }
 
     identity() {
@@ -23,15 +23,15 @@ class Orc extends Creature {
     }
 
     scream() {
-        console.log(` cri puissant de ${this.name}`);
+        console.log(`Cri puissant de ${this.name}`);
     }
 
     bite() {
-        console.log(`${this.name} mord avec ses dents acérées.`);
+        console.log(`L' ${this.name} mord avec ses dents acérées.`);
     }
 
     saysomething() {
-        console.log(`Je suis ${this.name} the Orc!`);
+        console.log(`Je suis ${this.name}`);
     }
 
     identity() {
@@ -56,7 +56,7 @@ class Urukhai extends Orc {
 
     identity() {
         super.identity();
-        console.log(`I am an Urukhai.`);
+        console.log(``);
     }
 }
 
@@ -68,11 +68,11 @@ class ChiefOrc extends Orc {
     }
 
     giveOrder() {
-        console.log(`${this.name}, the Chief, gives an order!`);
+        console.log(`${this.name}, C'EST UN ORDRE! `);
     }
 
     saysomething() {
-        console.log(`I am ${this.name}, the Chief of the Orcs!`);
+        console.log(`JE SUIS ${this.name}, LE CHEF !`);
     }
 
     identity() {
